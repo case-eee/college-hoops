@@ -1,14 +1,21 @@
-.signup a {
-	text-decoration: none;
+.login div {
+	margin-top: 1em;
 }
 
-.splash-signup {
+.login .pure-button {
+	background-color: white;
+	color: black;
+	margin-top: 1em;
+}
+
+
+.splash-login {
   position: unset !important;
   width: 75%;
   margin-top: 3em !important;
 }
 
-.splash .signup {
+.splash .login {
   width: 75%;
   height: 50%;
   margin: auto;
@@ -26,8 +33,6 @@
 	font-size: 20px;
 }
 
-.signup .pure-form input[type] {
+.login .pure-form input[type] {
 	margin-top: 1em;
 }
-
-

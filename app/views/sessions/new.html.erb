@@ -1,0 +1,22 @@
+<div class="splash-container">
+  <div class="splash splash-login">
+ 		<div class="login">
+	  	<h2>Login here.</h2>
+
+			<%= form_for :login, class: "pure-form" do |f| %>
+
+				<div>
+			  	<%= f.label :email %>
+			  	<%= f.text_field :email, autofocus: true %>
+				</div>
+
+				<div>
+			  	<%= f.label :password %>
+			  	<%= f.password_field :password %>
+			  </div>
+
+			  <%= f.submit "Login", class: "pure-button" %>
+			<% end %>
+		</div>
+	</div>
+</div>
