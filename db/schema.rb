@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_205059) do
     t.bigint "user_id", null: false
     t.bigint "game_id", null: false
     t.bigint "week_id", null: false
-    t.integer "cover"
+    t.string "cover"
     t.string "correct"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

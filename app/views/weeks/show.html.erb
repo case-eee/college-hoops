@@ -1,6 +1,7 @@
 <div class="splash-container week-show">
 	<h1 class="week-header">Welcome to Week <%= @week.name %>!</h1>
 	<div class="week-games">
+
 		<% @week.games.each do |game| %>
 			<div class="separator">
 		  	-----------------------
@@ -12,15 +13,20 @@
 			<div class="game">
 	 			<% home_spread = game.favorite == 'home' ? "- #{game.spread}" : "+ #{game.spread}" %>
 				<% home_text = "#{game.home_team} (#{game.home_ranking}) #{home_spread}" %>
-	      <%= link_to home_text, login_path, class: "pure-button pure-button-primary" %>
+	      <%= link_to home_text, bet_path(game, "home"), class: "pure-button pure-button-primary #{selected_home?(game)}", disabled: selected_home?(game).present?, method: "post" %>
     	</div>
+    	<div class="score">
+      	<%= game.home_score %>
+			</div>
 
 			<div class="game">
 				<% away_spread = game.favorite == 'away' ? "- #{game.spread}" : "+ #{game.spread}" %>
 				<% away_text = "#{game.away_team} (#{game.away_ranking}) #{away_spread}" %>
-		    <%= link_to away_text, login_path, class: "pure-button pure-button-primary" %>
+		    <%= link_to away_text, bet_path(game, "away"), class: "pure-button pure-button-primary #{selected_away?(game)}", disabled: selected_away?(game).present?, method: "post" %>
 		  </div>
-
+		  <div class="score">
+	    	<%= game.away_score %>
+		  </div>
 		  <div class="separator">
 		  	-----------------------
 		  </div>

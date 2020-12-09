@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :weeks, only: [:index, :show, :new, :create, :update]
+
+  post '/games/:game_id/bets/:pick' => 'bets#create', as: :bet
 end

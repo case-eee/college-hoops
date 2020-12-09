@@ -37,3 +37,11 @@
 	color: #1f8dd6 !important;
 	font-weight: bold;
 }
+
+.game .selected {
+	background: #02b87b !important;
+}
+
+.week-games .score {
+	color: black !important;
+}
