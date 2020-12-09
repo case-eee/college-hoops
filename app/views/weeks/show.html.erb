@@ -1,0 +1,29 @@
+<div class="splash-container week-show">
+	<h1 class="week-header">Welcome to Week <%= @week.name %>!</h1>
+	<div class="week-games">
+		<% @week.games.each do |game| %>
+			<div class="separator">
+		  	-----------------------
+		  </div>
+		  <div class="start-time">
+				<strong>Start Time:</strong> <%= game.start_time.strftime("%l:%M %Z") %>
+			</div>
+
+			<div class="game">
+	 			<% home_spread = game.favorite == 'home' ? "- #{game.spread}" : "+ #{game.spread}" %>
+				<% home_text = "#{game.home_team} (#{game.home_ranking}) #{home_spread}" %>
+	      <%= link_to home_text, login_path, class: "pure-button pure-button-primary" %>
+    	</div>
+
+			<div class="game">
+				<% away_spread = game.favorite == 'away' ? "- #{game.spread}" : "+ #{game.spread}" %>
+				<% away_text = "#{game.away_team} (#{game.away_ranking}) #{away_spread}" %>
+		    <%= link_to away_text, login_path, class: "pure-button pure-button-primary" %>
+		  </div>
+
+		  <div class="separator">
+		  	-----------------------
+		  </div>
+		<% end %>
+	</div>
+</div>

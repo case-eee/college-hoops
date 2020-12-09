@@ -1,0 +1,39 @@
+.week-show {
+	margin-top: 3.5em;
+	margin-bottom: 3.5em;
+	overflow: auto !important;
+	background-color: white !important;
+	position: unset !important;
+}
+
+.week-header {
+	margin-left: 2em;
+}
+
+.week-games {
+	font-size: 20px;
+	color: white;
+	margin-left: 2em;
+}
+
+.week-games a {
+	width: 12em;
+	background: #1f8dd6 !important;
+	color: white !important;
+}
+
+.game {
+	margin-bottom: 1em;
+}
+
+.start-time {
+	margin: 2em;
+	color: black !important;
+	font-weight: bold;
+}
+
+.week-games .separator {
+	margin-left: 2em;
+	color: #1f8dd6 !important;
+	font-weight: bold;
+}

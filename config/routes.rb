@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
+
+  resources :weeks, only: [:index, :show, :new, :create, :update]
 end
